@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmptyQ.ai - Intelligent Automation Solutions</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-bg: #f3f4f6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        header {
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            color: white;
+            padding: 2rem 0;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(37, 99, 235, 0.1), rgba(30, 64, 175, 0.1));
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #2563eb, #1e40af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+        }
+
+        .services {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            padding: 2rem;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            padding: 5rem 0;
+            background: var(--light-bg);
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--secondary-color);
+        }
+
+        #submission-message {
+            display: none;
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        #submission-message.success {
+            display: block;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        #submission-message.error {
+            display: block;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        footer {
+            background: var(--text-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2>EmptyQ.ai</h2>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>EmptyQ.ai</h1>
+            <p>Empowering Businesses Through Intelligent Solutions</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Automation</h3>
+                    <p>Streamline your business processes with cutting-edge automation solutions that enhance efficiency and reduce operational costs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Data Extraction</h3>
+                    <p>Transform unstructured data into actionable insights with our advanced data extraction and processing capabilities.</p>
+                </div>
+                <div class="service-card">
+                    <h3>AI Agents</h3>
+                    <p>Leverage intelligent AI agents to automate complex tasks and deliver personalized experiences at scale.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technology Consulting</h3>
+                    <p>Expert guidance to help you navigate the digital landscape and implement the right technology solutions for your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Contact Us</h2>
+            <form id="contactForm" class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+                <div id="submission-message"></div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        async function handleSubmit(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const message = document.getElementById('submission-message');
+            
+            // Disable the submit button during submission
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                // Replace this URL with your Google Apps Script Web App URL
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbz4znvRIAwQEDBnQqFn_yItExbOjEQ89cvuiy6zKlyRH8xwucQM1tleJ5AofB_Iv8xe/exec';
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData.entries());
+                data.timestamp = new Date().toISOString();
+
+                const response = await fetch(scriptURL, {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    message.textContent = 'Thank you! Your message has been sent successfully.';
+                    message.className = 'success';
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                message.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                message.className = 'error';
+                console.error('Error:', error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 EmptyQ.ai. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
